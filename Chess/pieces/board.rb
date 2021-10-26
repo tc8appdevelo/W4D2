@@ -68,6 +68,10 @@ attr_reader :grid
     end 
 
     def move_piece(start_pos, end_pos)
+        if !valid_pos?(start_pos) || !valid_pos?(end_pos)
+        raise "Not a valid position"
+        end 
+
         if self[start_pos].nil?
             raise "No piece at start position"
         end
@@ -81,4 +85,12 @@ attr_reader :grid
 
     end
 
+    def valid_pos?(pos)
+        pos.all? { |position| position.between?(0,7)}
+    end 
+
 end
+b = Board.new
+k = King.new("White",b,[3,3])
+# k.moves_diffs
+p k.moves(k.moves_diffs,[3,3])

@@ -1,8 +1,22 @@
 require_relative 'piece.rb'
 class King < Piece
-    #  def initialize(color,board,pos)
-    #     @color = color
-    #     @board = board
-    #     @pos = pos 
-    # end
+    include Stepable
+
+    MOVES = [
+    [1,0],
+    [-1,0],
+    [0,1],
+    [0,-1],
+    [1,1],
+    [-1,1],
+    [1,-1],
+    [-1,-1]
+  ]
+    def symbol
+        :King
+    end
+
+    def moves_diffs
+        MOVES
+    end
 end

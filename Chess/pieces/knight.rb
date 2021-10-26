@@ -1,6 +1,8 @@
 require_relative 'piece.rb'
+require_relative 'stepable.rb'
 
 class Knight < Piece
+include Stepable
 
     MOVES = [
     [-2, -1],
@@ -27,6 +29,5 @@ class Knight < Piece
         MOVES
     end
 
-    
-
 end
+
