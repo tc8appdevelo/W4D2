@@ -1,9 +1,13 @@
 require_relative 'piece.rb'
 
 class Rook < Piece
-     def initialize(color,board,pos)
-        @color = color
-        @board = board
-        @pos = pos 
+    include Stepable
+
+    def symbol
+        :Rook
+    end
+
+    def moves_diffs
+        HORIZONTAL_DIRS
     end
 end

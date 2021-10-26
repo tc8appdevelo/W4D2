@@ -1,5 +1,5 @@
- module Stepable
-def moves(moves, pos)
+module Stepable
+  def moves(moves, pos)
     valid_moves = []
     cur_x, cur_y = pos
     moves.each do |(dx, dy)|
@@ -11,9 +11,8 @@ def moves(moves, pos)
     end
     valid_moves
   end
-
-def moves_diffs
-    end
- end
+  def moves_diffs
+  end
+end
  
  

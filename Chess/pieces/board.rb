@@ -91,6 +91,6 @@ attr_reader :grid
 
 end
 b = Board.new
-k = King.new("White",b,[3,3])
+k = Rook.new("White",b,[3,3])
 # k.moves_diffs
 p k.moves(k.moves_diffs,[3,3])
